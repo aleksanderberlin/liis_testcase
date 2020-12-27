@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn liis-testcase.wsgi --log-file -
+web: gunicorn liis_testcase.wsgi --log-file -
