@@ -8,7 +8,6 @@ from datetime import datetime
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
 
 
 # Create your views here.
@@ -18,8 +17,6 @@ class WorkplaceList(APIView):
     """
     List all workplaces and manage them.
     """
-
-    permission_classes = (IsAuthenticated,)
 
     def get_object(self, pk):
         try:
@@ -60,8 +57,6 @@ class WorkplaceDetail(APIView):
     Retrieve, update or delete a workplace object.
     """
 
-    permission_classes = (IsAuthenticated,)
-
     def get_object(self, pk):
         try:
             return Workplace.objects.get(pk=pk)
@@ -93,8 +88,6 @@ class BookingList(APIView):
     List all workplaces and manage them.
     """
 
-    permission_classes = (IsAuthenticated,)
-
     def get_object(self, pk):
         try:
             return Booking.objects.get(pk=pk)
@@ -121,8 +114,6 @@ class BookingDetail(APIView):
     """
     Retrieve, update or delete a workplace object.
     """
-
-    permission_classes = (IsAuthenticated,)
 
     def get_object(self, pk):
         try:
