@@ -1,6 +1,6 @@
 /venv/
-/main/migrations/
 /db.sqlite3
 /liis_testcase/__init__.py
 .idea
 /main/__init__.py
+.env
